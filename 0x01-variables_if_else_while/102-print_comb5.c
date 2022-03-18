@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *  * main - Prints all possible different combinations of two digits.
- *   *
- *    * Return: 0 - if ok.
- *     */
+ * main - Prints all possible different combinations of two digits.
+ *
+ * Return: 0 - if ok.
+ */
 int main(void)
 {
 	int n, m;
+
 	for (n = 0; n < 99; n++)
 	{
 		for (m = 0; m < 100; m++)
@@ -19,7 +20,7 @@ int main(void)
 				putchar(' ');
 				putchar((m / 10) + '0');
 				putchar((m % 10) + '0');
-			}	
+			}
 			if (n < 98 && (m > n))
 			{
 				putchar(',');
