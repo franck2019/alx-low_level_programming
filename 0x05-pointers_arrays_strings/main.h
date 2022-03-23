@@ -15,4 +15,6 @@ int _strlen(char *s);
 void _puts(char *str);
 /* print_rev prototype */
 void print_rev(char *s);
+/* rev_string prototype */
+void rev_string(char *s);
 #endif /* MAIN_H */
