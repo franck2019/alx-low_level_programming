@@ -19,4 +19,8 @@ void print_rev(char *s);
 void rev_string(char *s);
 /* puts2 prototype */
 void puts2(char *str);
+/* puts_half prototype */
+void puts_half(char *str);
+/* print_array prototype */
+void print_array(int *a, int n);
 #endif /* MAIN_H */
