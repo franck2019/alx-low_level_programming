@@ -25,4 +25,6 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 /* strcpy prototype */
 char *_strcpy(char *dest, char *src);
+/* _atoi prototype */
+int _atoi(char *s);
 #endif /* MAIN_H */
