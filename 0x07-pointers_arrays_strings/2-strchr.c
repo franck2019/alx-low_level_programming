@@ -13,7 +13,7 @@ char *_strchr(char *s, char c)
 {
 	unsigned int i, len;
 	char *res = NULL;
-	
+
 	len = strlen(s);
 	for (i = 0; i < (len + 1); i++)
 	{
