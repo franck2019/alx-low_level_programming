@@ -14,8 +14,8 @@ char *_strchr(char *s, char c)
 	unsigned int i, len;
 	char *res = NULL;
 
-	len = strlen(s);
-	for (i = 0; i < (len + 1); i++)
+	len = strlen(s); /* Below we need to take in count the '\0' */
+	for (i = 0; i < (len + 1); i++) /* i < len + 1 to include '\0' */
 	{
 		if (s[i] == c)
 			return (s + i);
