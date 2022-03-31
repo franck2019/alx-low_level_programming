@@ -19,4 +19,6 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 /* print_chessboard prototype */
 void print_chessboard(char (*a)[8]);
+/* print_diagsums prototype */
+void print_diagsums(int *a, int size);
 #endif /* MAIN_H */
