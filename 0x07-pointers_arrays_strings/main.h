@@ -21,4 +21,6 @@ char *_strstr(char *haystack, char *needle);
 void print_chessboard(char (*a)[8]);
 /* print_diagsums prototype */
 void print_diagsums(int *a, int size);
+/* set_string prototype */
+void set_string(char **s, char *to);
 #endif /* MAIN_H */
