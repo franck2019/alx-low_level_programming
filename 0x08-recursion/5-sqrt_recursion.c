@@ -11,19 +11,14 @@
  */
 int square_root_wrapper(int n, int min, int max)
 {
-	int guess = 0, guess_squared = 0;
-
-	if (max < min)
-		return (-1);
-	guess = (min + max) / 2;
-	guess_squared = guess * guess;
-	if (guess_squared == n)
-		return (guess);
-	else if (guess_squared < n)
-		return (square_root_wrapper(n, guess + 1, max));
-	else
-		return (square_root_wrapper(n, min, guess - 1));
-	return (guess);
+	if (min <= max)
+	{
+		if ((n / min) == min && (n % min) == 0)
+			return (min);
+		else
+			return (square_root_wrapper(n, min + 1, max));
+	}
+	return (-1);
 }
 
 /**
@@ -34,5 +29,11 @@ int square_root_wrapper(int n, int min, int max)
  */
 int _sqrt_recursion(int n)
 {
+	if (n < 0)
+		return (-1);
+	if (n == 0)
+		return (0);
+	if (n == 1)
+		return (1);
 	return (square_root_wrapper(n, 1, n));
 }
