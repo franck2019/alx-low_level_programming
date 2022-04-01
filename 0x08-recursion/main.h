@@ -15,4 +15,6 @@ int _strlen_recursion(char *s);
 int factorial(int n);
 /* _pow_recursion prototype */
 int _pow_recursion(int x, int y);
+/* _sqrt_recursion prototype */
+int _sqrt_recursion(int n);
 #endif /* MAIN_H */
