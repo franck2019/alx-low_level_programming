@@ -7,4 +7,6 @@
 int _putchar(char c);
 /* _puts_recursion prototype */
 void _puts_recursion(char *s);
+/* _print_rev_recursion */
+void _print_rev_recursion(char *s);
 #endif /* MAIN_H */
