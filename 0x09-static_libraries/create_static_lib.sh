@@ -7,7 +7,7 @@ for cfile in *.c; do
 	oname=$(echo $cfile | cut -d. -f1) # retrieve the name of the c file
 
 	ofile=$(echo $oname.o) # add the .o extension
-	
+
 	gcc -c $cfile -o $ofile # compile
 
 	if [[ $? -eq 0 ]]  #check if there is compiling error
