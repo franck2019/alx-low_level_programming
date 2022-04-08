@@ -19,5 +19,5 @@ for cfile in *.c; do
 done
 
 # create the library
-ar rc liball.a *.a
+ar rc liball.a *.o
 ranlib liball.a #indexe it
