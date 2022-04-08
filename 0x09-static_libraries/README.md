@@ -1,7 +1,7 @@
 # 0x09-static_libraries project
 
-libmy.a, main.h
-: Create the static library libmy.a containing all the functions listed below:
+### libmy.a, main.h
+Task: Create the static library libmy.a containing all the functions listed below:
   > * int _putchar(char c);
   > * int _islower(int c);
   > * int _isalpha(int c);
@@ -23,7 +23,7 @@ libmy.a, main.h
   > * char *_strpbrk(char *s, char *accept);
   > * char *_strstr(char *haystack, char *needle);
 
-How to create the static library ?
+#### How to create the static library ?
 
 1- create a header file for your librairy containing all the prototypes of your functions and call that file main.h
 
@@ -64,8 +64,8 @@ ar rc library_name.a  *.o        (*.o means all your object files belonging to t
 ```
 
 
-create_static_lib.sh
-: Create a script called create_static_lib.sh that creates a static library called liball.a from all the .c files that are in the current directory.
+### create_static_lib.sh
+Task : Create a script called create_static_lib.sh that creates a static library called liball.a from all the .c files that are in the current directory.
 
 Here just create a file called create_static_lib.sh and use what you did above.
 
