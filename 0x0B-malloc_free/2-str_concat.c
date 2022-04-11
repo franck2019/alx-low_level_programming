@@ -14,16 +14,23 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *newchar;
+	char *empty = "";
 	unsigned int len1, len2;
 
 	if (s1)
 		len1 = strlen(s1);
 	else
+	{
+		s1 = empty;
 		len1 = 0;
+	}
 	if (s2)
 		len2 = strlen(s2);
 	else
+	{
+		s2 = empty;
 		len2 = 0;
+	}
 	newchar = (char *) malloc((len1 + len2 + 1) * sizeof(char));
 	if (newchar == NULL)
 		return (NULL);
