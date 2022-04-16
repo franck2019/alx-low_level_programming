@@ -13,4 +13,6 @@ char *_strdup(char *str);
 char *str_concat(char *s1, char *s2);
 /* alloc_grid prototype */
 int **alloc_grid(int width, int height);
+/* free_grid prototype */
+void free_grid(int **grid, int height);
 #endif /* HOLBERTON_H */
