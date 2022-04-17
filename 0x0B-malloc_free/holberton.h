@@ -15,4 +15,6 @@ char *str_concat(char *s1, char *s2);
 int **alloc_grid(int width, int height);
 /* free_grid prototype */
 void free_grid(int **grid, int height);
+/* argstostr prototype */
+char *argstostr(int ac, char **av);
 #endif /* HOLBERTON_H */
