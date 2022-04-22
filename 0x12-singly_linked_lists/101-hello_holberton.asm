@@ -19,4 +19,5 @@ main:
 
 	mov ebx, 0
 	mov eax, 1
+	ret
 ;	int 0x80
