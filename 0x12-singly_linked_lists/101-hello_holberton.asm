@@ -3,16 +3,20 @@
 ;
 ; nasm -f elf64 101-hello_holberton.asm &&
 ; gcc -no-pie -std=gnu89 101-hello_holberton.o -o hello
-;----------------------------------------------------------------------------------------
+;----------------------------------------------------------------------------------
+	section	.data
+msg:	db 	"Hello, Holberton", 0    ; Note strings must be terminated with 0 in C
+fmt:	db	"%s", 10, 0
 
+	section	.text
+	extern	printf
 	global	main
-	extern	puts
+main:
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
+	call printf
 
-	section .text
-main:					; This is called by Clibrary startup code
-	mov	rdi, message		; First integer (or pointer) argument in rdi
-	call	puts			; puts(message)
-	ret				; Return from main back into C library
-
-message:
-	db 	"Hello, Holberton",0    ; Note strings must be terminated with 0 in C
+	mov ebx, 0
+	mov eax, 1
+	int 0x80
