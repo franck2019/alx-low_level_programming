@@ -25,9 +25,9 @@ size_t print_listint(const listint_t *h);
 /* listint_len prototype */
 size_t listint_len(const listint_t *h);
 /* add_nodeint prototype */
-listint_t *add_node(listint_t **head, const char *str);
+listint_t *add_nodeint(listint_t **head, const int n);
 /* add_nodeint_end prototype */
-listint_t *add_nodeint_end(listint_t **head, const char *str);
+listint_t *add_nodeint_end(listint_t **head, const int n);
 /* free_listint */
 void free_listint(listint_t *head);
 /* free_listint2 prototype */
