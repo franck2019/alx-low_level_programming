@@ -13,17 +13,15 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *current;
-	int number;
+	int node_data;
 
-	if (head == NULL)
+	if (*head == NULL)
 		return (0);
 
-	if (head != NULL)
-	{
-		current = *head;
-		(*head) = (*head)->next;
-		number = current->n;
-		free(current);
-	}
-	return (number);
+	current = *head;
+	(*head) = (*head)->next;
+	node_data = current->n;
+	free(current);
+
+	return (node_data);
 }
