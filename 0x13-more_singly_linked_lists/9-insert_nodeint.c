@@ -37,8 +37,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	counter = 0;
 	temp = *head;
-	left = NULL;
-	right = NULL;
+	/* left = NULL;
+	right = NULL; */
 
 	while (temp != NULL && counter < idx)
 	{
