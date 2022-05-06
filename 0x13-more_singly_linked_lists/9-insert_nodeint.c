@@ -4,6 +4,27 @@
 #include "lists.h"
 
 /**
+ * _getsize - function which gives the size of a linked list of listint
+ * @head: pointer of pointer to linked list
+ *
+ * Return: length of the listint
+ */
+int _getsize(listint_t *head)
+{
+	int length = 0;
+	listint_t *h;
+
+	h = head;
+	while (h != NULL)
+	{
+		length++;
+		h = h->next;
+	}
+	return (length);
+}
+
+
+/**
  * insert_nodeint_at_index - function that inserts a new node at
  * a given position.
  * @head: a pointer to the struct listint_t
@@ -20,14 +41,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (*head == NULL)
 		return (NULL);
 
-	length = 0;
-	temp = *head;
-
-	while (temp != NULL)
-	{
-		length++;
-		temp = temp->next;
-	}
+	length = _getsize(*head);
 
 	if (idx > (length - 1))
 		return (NULL);
