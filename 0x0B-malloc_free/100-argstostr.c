@@ -16,30 +16,42 @@ char *argstostr(int ac, char **av)
 	char *res;
 
 	k = 0;
+	len = 0;
+	len_word = 0;
+
 	if (ac == 0 || av == NULL)
 		return (NULL);
+
 	for (i = 0; i < ac ; i++)
 	{
 		len += strlen(av[i]) + 1;
 	}
+	
 	len += 1;
-	res = (char *) malloc(len * sizeof(char));
+
+	res = malloc(len * sizeof(char));
+
 	if (res == NULL)
 	{
 		free(res);
 		return (NULL);
 	}
+
 	for (i = 0; i < ac; i++)
 	{
 		len_word = strlen(av[i]);
+
 		for (j = 0; j < len_word; j++)
 		{
 			res[k] = av[i][j];
 			k++;
 		}
+
 		res[k] = '\n';
 		k++;
 	}
+
 	res[k] = '\0';
+	
 	return (res);
 }
