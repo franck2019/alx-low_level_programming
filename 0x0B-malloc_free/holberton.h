@@ -17,4 +17,6 @@ int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 /* argstostr prototype */
 char *argstostr(int ac, char **av);
+/* strtow prototype */
+char **strtow(char *str);
 #endif /* HOLBERTON_H */
