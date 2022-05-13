@@ -11,7 +11,10 @@
  */
 char **strtow(char *str)
 {
-	char *res;
+	char **res;
 
-	return (&res);
+	if (str == NULL || str = "")
+		return (NULL);
+
+	return (res);
 }
