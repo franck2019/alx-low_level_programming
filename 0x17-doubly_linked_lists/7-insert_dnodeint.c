@@ -40,9 +40,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *current = NULL, *prev = NULL, *new = NULL;
 	unsigned int i = 0, size = 0; /* the size of the dlistint_t */
 
-	if (*h == NULL && idx != 0)
-		return (NULL);
-
 	size = size_dlistint_t(h);
 
 	if (idx > size)
