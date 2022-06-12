@@ -1,0 +1,23 @@
+1: install the python library uncompyle6
+pip3 install uncompyle6
+
+2: verify the type of the file by using
+$ file crackme4
+
+You wille se that crackme4 is python bytecode file
+
+3: rename the crackme4 file into crackme4.pyc since theuncompyle6 command only works on .pyc file
+
+4: decompile the file by using
+$ uncompyle6 crackme4.pyc
+
+this command will uncompile the crackme4.pyc file and print the result on the stdout
+
+5: you can now read the code and find the password or decompile again but this time by saving 
+the result inside in a file called crackme4.py
+- open the file and add the the line of code: print(0k) before the test condition
+ to see the password
+
+4- execute again the the crackme4.py by using
+$ python3 crackme4.py
+and execute to see the password
